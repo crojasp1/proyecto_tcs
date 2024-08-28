@@ -12,3 +12,28 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Boleteria {
+    id Int @id @default(autoincrement())
+    referencia String @unique
+    valor Int @default(0)
+    cantidad Int
+    tipo_de_venta String
+    evento Evento @relation(fields: [eventoId], references: [id_evento])
+    eventoId Int
+}
+
+model Evento{
+  id_evento Int @id @default(autoincrement())
+  fecha DateTime
+  lugar String
+  ubicacion String
+  aforo Int
+}
+
+model Pago{
+  id_pago Int @id @default(autoincrement())
+  codigo_pago Int
+  pago_neto Int
+  iva 
+}
