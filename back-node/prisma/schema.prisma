@@ -21,6 +21,9 @@ model Boleteria {
     tipo_de_venta String
     evento Evento @relation(fields: [eventoId], references: [id_evento])
     eventoId Int
+
+    category Pago @relation(fields: [categoryId], references: [id_pago])
+    categoryId Int
 }
 
 model Evento{
@@ -29,11 +32,16 @@ model Evento{
   lugar String
   ubicacion String
   aforo Int
+  boleteria Boleteria[]
 }
 
 model Pago{
   id_pago Int @id @default(autoincrement())
   codigo_pago Int
   pago_neto Int
-  iva 
+  iva Float
+  total_ingreso Int
+  boleteria Boleteria[]
+
+
 }
