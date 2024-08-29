@@ -13,35 +13,53 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Boleteria {
-    id Int @id @default(autoincrement())
-    referencia String @unique
-    valor Int @default(0)
-    cantidad Int
-    tipo_de_venta String
-    evento Evento @relation(fields: [eventoId], references: [id_evento])
-    eventoId Int
 
-    category Pago @relation(fields: [categoryId], references: [id_pago])
-    categoryId Int
+model User{
+id Int @id @default(autoincrement())
+Name String 
+lastName String
+password String
+email String @unique
+type Usertype @default(client)
 }
 
-model Evento{
-  id_evento Int @id @default(autoincrement())
-  fecha DateTime
-  lugar String
-  ubicacion String
-  aforo Int
-  boleteria Boleteria[]
+enum Usertype{
+  super_admin
+  client
 }
 
-model Pago{
-  id_pago Int @id @default(autoincrement())
-  codigo_pago Int
-  pago_neto Int
-  iva Float
-  total_ingreso Int
-  boleteria Boleteria[]
+model Client{
 
+id_numb Int @id
+age Int
+name String
+lastName String
+phone String
+adress String
+email String
+gender String
+
+UserGenerateId Int @unique
+ userGeneral UserGeneral @relation(fields: [UserGenerateId], references: [id])
 
 }
+
+model UserGeneral{
+  id  Int @id @default(autoincrement())
+  client Client?
+}
+
+model UserVip{
+  id  Int @id @default(autoincrement())
+  typeclint  TypeClient 
+  companyName String
+  numberUser Int
+  numberCart Int
+
+}
+
+enum TypeClient{
+  Legal
+  Natuaral
+}
+
