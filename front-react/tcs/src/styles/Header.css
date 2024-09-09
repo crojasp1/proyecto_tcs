@@ -1,0 +1,18 @@
+#color-nav{
+    background-color: #ff4a4a !important;
+}
+#texto-blanco{
+    color: azure !important;
+    font-size: 20px;
+    
+}
+.distancia{
+display: flex;
+margin-left: 50px;
+margin-right: 80px;
+}
+.distancia:hover{
+    font-weight: bold;
+    text-decoration:overline;
+}
+
