@@ -26,29 +26,30 @@ const Banner = () => {
                 <div className="slide">
                     <img src={slider1} alt="Slide 1" />
                     <div className="slide-text">
-                        <h1>Bienvenidos a Tickets Cars Shop</h1>
-                        <p>Los mejores eventos de carros los encontraras aqui</p>
+                        <h1>¡Bienvenidos a Tickets Cars Shop!
+                        </h1>
+                        <p>Los mejores eventos de carros los encontraras aquí.</p>
                     </div>
                 </div>
                 <div className="slide">
                     <img src={slider2} alt="Slide 2" />
                     <div className="slide-text">
-                        <h1>Bienvenidos a Tickets Cars Shop</h1>
-                        <p>Los mejores eventos de carros los encontraras aqui</p>
+                        <h1>¡Bienvenidos a Tickets Cars Shop!</h1>
+                        <p>Los mejores eventos de carros los encontraras aquí.</p>
                     </div>
                 </div>
                 <div className="slide">
                     <img src={slider3} alt="Slide 3" />
                     <div className="slide-text">
-                        <h1>Bienvenidos a Tickets Cars Shop</h1>
-                        <p>Los mejores eventos de carros los encontraras aqui</p>
+                        <h1>¡Bienvenidos a Tickets Cars Shop!</h1>
+                        <p>Los mejores eventos de carros los encontraras aquí.</p>
                     </div>
                 </div>
                 <div className="slide">
                     <img src={slider4} alt="Slide 4" />
                     <div className="slide-text">
-                        <h1>Bienvenidos a Tickets Cars Shop</h1>
-                        <p>Los mejores eventos de carros los encontraras aqui</p>
+                        <h1>¡Bienvenidos a Tickets Cars Shop!</h1>
+                        <p>Los mejores eventos de carros los encontraras aquí.</p>
                     </div>
                 </div>
             </Slider>      

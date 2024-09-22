@@ -17,14 +17,14 @@ function Tags() {
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={audi}/>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Audi Visionary Drive</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Es un evento que celebra la innovación y el diseño de Audi. Aquí podrán disfrutar
+          de una exhibición de modelos icónicos y avances tecnológicos.
         </Card.Text>
         <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        GO!
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -48,4 +48,4 @@ function Tags() {
   );
 }
 
-export default Tags
+export default Tags;
