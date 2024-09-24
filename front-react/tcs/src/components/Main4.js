@@ -5,25 +5,25 @@ const Contactanos = () => {
     const opcionesContacto = [
         {
             title: 'Soporte Técnico',
-            desc: '¿Tienes problemas técnicos? Contáctanos para poder brindarte la ayuda que necesitas.',
+            description: '¿Tienes problemas técnicos? Contáctanos para poder brindarte la ayuda que necesitas.',
             icon: '🛠️',
             email: 'soporte@tcs.com'
         },
         {
             title: 'Ventas',
-            desc: 'Consulta acerca de nuestros productos y servicios o haz seguimiento de tus compras realizadas.',
+            description: 'Consulta acerca de nuestros productos y servicios o haz seguimiento de tus compras realizadas.',
             icon: '💼',
             email: 'ventas@tcs.com'
         },
         {
             title: 'Sugerencias',
-            desc: 'Nos encantaría saber cómo podemos mejorar. Tu opinión es muy importante para nosotros. Envía tus ideas o comentarios.',
+            description: 'Nos encantaría saber cómo podemos mejorar. Tu opinión es muy importante para nosotros. Envía tus ideas o comentarios.',
             icon: '💡',
             email: 'sugerencias@tcs.com' 
         },
         {
             title: 'Servicio al Cliente',
-            desc: 'Contáctanos para cualquier duda sobre envíos, devoluciones o servicios postventa.',
+            description: 'Contáctanos para cualquier duda sobre envíos, devoluciones o servicios postventa.',
             icon: '📞',
             email: 'scliente@tcs.com'
         }
