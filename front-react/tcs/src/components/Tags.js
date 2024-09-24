@@ -1,51 +1,47 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import audi from '../assets/audi.jpg'
+import Tag from './Tag'
+import image1 from '../assets/audi.jpg'
+import image2 from '../assets/lambo.jpg'
+import image3 from '../assets/toyota.jpg'
 
+const tags = [
+  {
+    id: 1,
+    title: 'Audi Visionary Drive',
+    image: image1,
+    url: 'https://youtube.com/fazttech',
+    text: 'Audi Visionary Drive es un evento que presenta los últimos avances en tecnología, diseño y rendimiento. Los asistentes podrán conducir modelos eléctricos y deportivos en una pista diseñada para destacar su potencia, y participar en charlas innovación automotriz. ¡Los esperamos!'
+  },
+  {
+    id: 2,
+    title: 'Lamborghini Performance',
+    image: image2,
+    url: 'https://youtube.com/fazttech',
+    text: 'Lamborghini Performance es un evento exclusivo para los amantes de la velocidad y el diseño de lujo. Los asistentes podrán probar los superdeportivos más potentes de Lamborghini en una pista, disfrutar de exposiciones sobre tecnología avanzada y conocer de cerca el futuro de la marca.'
+  },
+  {
+    id: 3,
+    title: 'Toyota Innovation Expo',
+    image: image3,
+    url: 'https://youtube.com/fazttech',
+    text: 'Audi Visionary Drive es un evento exclusivo donde los asistentes podrán conducir los autos eléctricos y deportivos más innovadores de Audi, y participar en charlas sobre tecnología y movilidad futura.' 
+  }
+]
 
-import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
 function Tags() {
-  
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={audi}/>
-      <Card.Body>
-        <Card.Title>Audi Visionary Drive</Card.Title>
-        <Card.Text>
-          Es un evento que celebra la innovación y el diseño de Audi. Aquí podrán disfrutar
-          de una exhibición de modelos icónicos y avances tecnológicos.
-        </Card.Text>
-        <>
-      <Button variant="primary" onClick={handleShow}>
-        GO!
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-      </Card.Body>
-    </Card>
-    
-  );
+    <div className="container">
+      <div className="row">
+        {
+          tags.map(tag =>(
+            <div className="col-md-4" key={tag.id}>
+              <Tag title = {tag.title} image = {tag.image} url = {tag.url} text = {tag.text}/>
+            </div> 
+          ))
+        }
+      </div>
+    </div>
+  )
 }
 
-export default Tags;
+export default Tags
