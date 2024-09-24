@@ -1,34 +1,67 @@
-const db = require("../models");
+const express = require("express");
+const carTable = require("../models").car;
+const bodyParser = require("body-parser");
+const carModel = require("../models/car").Car;
 
+
+const router = express.Router();
+router.use(bodyParser.json());
 
 const multer = require("multer");
 const path = require("path");
 
-// Creando modelo principal
-const Car = db.Car;
-
-// CRUD: CREATE
-const addCar = async (req, res) => {
-
-  const car = new Car({
-    plate: req.body.plate,
-    marca: req.body.marca,
-    modelo: req.body.modelo,
-    version: req.body.version,
-    kilometers: req.body.kilometers,
-    capacity: req.body.capacity,
-    description: req.body.description,
-    image: req.body.image
-  });
-  console.log(car);
-  await car.save();
-  console.log("carro nuevo agregado");
-  res.json({
-    success: true,
-    name: req.body.marca
-  })
+//Get ALL CARS
+const getAllCars = async (req, res) =>{
+  let car = await carTable.findAll({});
+  console.log("Todos los productos obtenidos")
+  res.send(car);
 }
 
+// CRUD: Post
+const addCar = async (req, res) => {
+
+    carTable.create({
+      plate: req.body.plate,
+      marca: req.body.marca,
+      modelo: req.body.modelo,
+      version: req.body.version,
+      kilometers: req.body.kilometers,
+      capacity: req.body.capacity,
+      description: req.body.description,
+      image: req.body.image,
+      idClient: req.body.idClient
+    }).then((success) => {
+      res.json({
+        status: true,
+        message: "Carro creado con éxito"
+      });
+    }).catch((error) => {
+      console.error("Error al crear carro:", error); // Mostrar error
+      res.json({
+        status:false,
+        message: "Error al crear carro",
+        error: error.message // Incluir el mensaje de error en la respuesta para depuración
+      })
+    })
+  }
+
+  //Actualizar
+  const update = async (req, res) =>{
+
+    const uploaded = await carTable.update({plate:req.body.plate},{where: { id: req.params.id } })
+    .then((success) =>{
+      res.send(uploaded);
+      console.log(success);
+    }).catch((error) => {
+      console.error("Error al crear carro:", error); // Mostrar error
+      res.json({
+        status:false,
+        message: "Error al crear carro",
+        error: error.message // Incluir el mensaje de error en la respuesta para depuración
+    });
+  });
+  
+    }
 
 // Controlador de carga de la imagen
 const storage = multer.diskStorage({
@@ -46,5 +79,7 @@ const upload = multer({
 
 module.exports = {
   upload,
-  addCar
+  addCar,
+  getAllCars,
+  update
 }

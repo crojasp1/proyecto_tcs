@@ -3,9 +3,15 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Cars', {
+      id:{
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+        unique: true,
+        type: Sequelize.INTEGER
+      },
       plate: {
         allowNull: false,
-        primaryKey: true,
         unique: true,
         type: Sequelize.STRING
       },
@@ -35,6 +41,9 @@ module.exports = {
       image: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      idClient:{
+        type: Sequelize.INTEGER.UNSIGNED,
       }
     });
   },
