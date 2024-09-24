@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './tags.css'
+import '../styles/tags.css'
 
 function Tag({title, image, text, url}) {  
   return (
