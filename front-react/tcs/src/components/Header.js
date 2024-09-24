@@ -13,7 +13,7 @@ function Header() {
     <>
     <Navbar expand="lg" className="bg-body-tertiary py-1" id='color-nav'>
       <Container fluid>
-        <Navbar.Brand as={Link} to={"Home"} className='me-5 ms-3'><img src={tcs} height="80px" width="80px" alt='imagen de la pagina'/></Navbar.Brand>
+        <Navbar.Brand as={Link} to={"/"} className='me-5 ms-3'><img src={tcs} height="80px" width="80px" alt='imagen de la pagina'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,9 +21,9 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >  
-            <Nav.Link as={Link} to={"Eventos"} id='texto-blanco'className='distancia'>Eventos Disponibles</Nav.Link>
-            <Nav.Link as={Link}  to={"Quieres"} id='texto-blanco' className='distancia' >¿Que Quieres?</Nav.Link>
-            <Nav.Link as={Link}  to={"Contactanos"}id='texto-blanco' className='distancia'>Contactanos</Nav.Link>
+            <Nav.Link as={Link} to={"/Eventos"} id='texto-blanco'className='distancia'>Eventos Disponibles</Nav.Link>
+            <Nav.Link as={Link}  to={"/Quieres"} id='texto-blanco' className='distancia' >¿Que Quieres?</Nav.Link>
+            <Nav.Link as={Link}  to={"/Contactanos"}id='texto-blanco' className='distancia'>Contactanos</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
