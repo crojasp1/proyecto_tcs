@@ -3,10 +3,6 @@ import fondo from "../assets/fondo.jpg"
 import "../styles/Main3.css";
 import Button from 'react-bootstrap/Button';
 
-
-
-
-
 function Main3() {
   return (
     <div className='Main3'>
