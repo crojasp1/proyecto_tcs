@@ -26,6 +26,7 @@ function Header() {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <Outlet />
     </Navbar>
   );
 }
