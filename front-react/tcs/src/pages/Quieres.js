@@ -1,12 +1,12 @@
-import React from 'react';
-import Header from '../components/Header';
+import React from 'react'
+import Header from "../components/Header"
 
-
-const Quieres = () => {
-return(
-  <div>
-    <Header/>
-  </div>
-)
+function Contactanos() {
+  return (
+    <div className='Contactanos'>
+     <Header/>
+    </div>
+  )
 }
-export default Quieres
+
+export default Contactanos
