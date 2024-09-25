@@ -42,6 +42,8 @@ gender String
 UserGenerateId Int @unique
  userGeneral UserGeneral @relation(fields: [UserGenerateId], references: [id])
 
+userVipId Int @unique//foreign key
+userVip UserVip @relation(fields: [userVipId], references: [id])
 }
 
 model UserGeneral{
@@ -51,11 +53,14 @@ model UserGeneral{
 
 model UserVip{
   id  Int @id @default(autoincrement())
-  typeclint  TypeClient 
+  typeclient  TypeClient 
   companyName String
-  numberUser Int
+  //clients String[]
+  amountOfClients Int
   numberCart Int
 
+  client Client[]
+  vehiculo Vehiculo[]
 }
 
 enum TypeClient{
@@ -63,3 +68,62 @@ enum TypeClient{
   Natuaral
 }
 
+model Vehiculo{
+  id Int @id @default(autoincrement())
+  brand String
+  model String
+  km Int
+  capacity Int
+  version String
+  aditionalInfo String
+
+  userVipId Int //foreign key
+  userVip UserVip @relation(fields: [userVipId], references: [id])
+}
+
+
+
+//Salto de Evento relacionado con tiquete; FALTA relacionar usuarios con Tiket
+
+model Event{
+  id Int @id @default(autoincrement())
+  name String
+  date DateTime
+  location String
+  capacity Int
+  type String // PREGUNTAR QUE ES?
+  price Int
+  amountTickets Int //Preguntar
+  typeTicket TypeTickets
+  description String
+  imageUrl String //Pregunta
+  status String 
+
+  ticket Ticket[]
+}
+
+enum TypeTickets{
+  vip
+  general
+}
+
+model Ticket{
+  id Int @id @default(autoincrement())
+  consecutivo String
+  state String
+
+  eventId Int //foreign key
+  event Event @relation(fields: [eventId], references: [id])
+
+  shoppingCartId Int? @unique
+  shoppingCart ShoppingCart? @relation(fields: [shoppingCartId],references: [id])
+}
+
+ model ShoppingCart{ //Preguntar relacion: Un carrito de C tiene varios tiquetes
+  id Int @id @default(autoincrement())
+  items String[]
+  nombre String
+  cedula Int
+
+  ticket Ticket? @relation//foreign key
+ }
