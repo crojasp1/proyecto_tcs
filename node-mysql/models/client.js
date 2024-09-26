@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     idEvent: DataTypes.INTEGER,
     age: DataTypes.INTEGER,
     gender: DataTypes.ENUM("F","M","ND"),
-    email: DataTypes.INTEGER,
+    email: DataTypes.STRING,
     created_at: DataTypes.DATE,
     category: DataTypes.ENUM("C","V")
   }, 
