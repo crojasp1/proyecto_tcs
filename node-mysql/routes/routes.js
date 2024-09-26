@@ -1,5 +1,7 @@
 const express = require("express");
 const productController = require("../controllers/productController");
+const clientController= require("../controllers/clientController");
+
 const bodyParser = require("body-parser");
 
 const PORT = 8087;
@@ -25,6 +27,15 @@ router.post("/upload", productController.upload.single("image"), (req, res) => {
 router.put("/:id", productController.update);
 
 
+//----------------------Rutas de los Clientes...............................---------------
 
+  // Obteniendo todos los clientes:
+  router.get("/allClient", clientController.getAllClient);
+
+  // Creando cliente:
+  router.post("/addClient", clientController.createClient);
+
+  // Actualizando cliente:
+  //router.put("/:id", clientController.update);
 
 module.exports = router;

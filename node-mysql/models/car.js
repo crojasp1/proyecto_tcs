@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Definir la relación con el modelo Client
-      car.hasOne(models.Client, {
+      car.hasOne(models.client, {
         foreignKey: 'idClient', // La clave foránea en la tabla Client
         as: 'Client' // Alias para acceder a esta relación
       });

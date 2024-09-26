@@ -1,7 +1,6 @@
 const express = require("express");
 const carTable = require("../models").car;
 const bodyParser = require("body-parser");
-const carModel = require("../models/car").Car;
 
 
 const router = express.Router();
@@ -9,6 +8,7 @@ router.use(bodyParser.json());
 
 const multer = require("multer");
 const path = require("path");
+const { send } = require("process");
 
 //Get ALL CARS
 const getAllCars = async (req, res) =>{
@@ -48,9 +48,9 @@ const addCar = async (req, res) => {
   //Actualizar
   const update = async (req, res) =>{
 
-    const uploaded = await carTable.update({plate:req.body.plate},{where: { id: req.params.id } })
+    const updated = await carTable.update({plate:req.body.plate},{where: { id: req.params.id } })
     .then((success) =>{
-      res.send(uploaded);
+      res.send(updated);
       console.log(success);
     }).catch((error) => {
       console.error("Error al crear carro:", error); // Mostrar error
