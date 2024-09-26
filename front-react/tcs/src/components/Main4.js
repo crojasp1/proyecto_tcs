@@ -1,4 +1,5 @@
 import React from "react";
+import fondo from "../assets/phone.jpg"
 import '../styles/Main4.css';
 
 const Contactanos = () => {
@@ -30,10 +31,11 @@ const Contactanos = () => {
     ];
 
     return (
+    <div>
+        <img src={fondo} alt="imagen de fondo" id='imagen-fondo'/>
         <div className="contact-us-container">
             <h2>Contáctanos</h2>
             <p>Selecciona una opción para brindarte la ayuda adecuada:</p>
-
             <div className="contact-grid">
                 {opcionesContacto.map((option, index) => (
                     <div key = {index} className="contact-card">
@@ -47,6 +49,7 @@ const Contactanos = () => {
                 ))}
             </div>
         </div>
+    </div>
     );
 };
 

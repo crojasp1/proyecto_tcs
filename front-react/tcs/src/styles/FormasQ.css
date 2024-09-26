@@ -1,6 +1,5 @@
-.contact-us-container {
+.texto-qquieres {
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
@@ -9,28 +8,30 @@
 h2 {
     margin-bottom: 20px;
     font-size: 2em;
+    color: azure;
 }
 
 p {
     font-size: 1em;
     margin-bottom: 30px;
+    color: azure;
 }
 
-.contact-grid {
+.contenido-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.contact-card {
-    padding: 20;
+.cards {
+    padding: 20px;
     background-color: #ffba49 !important;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 10px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.contact-card:hover {
+.cards:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -47,14 +48,19 @@ h3{
 
 p{
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.contact-email {
+.email {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.contact-email:hover {
+.email:hover {
     text-decoration: underline;
+}
+
+.fondo{
+    background-color: #ff4a4a ;
 }

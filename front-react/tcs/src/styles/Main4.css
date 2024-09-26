@@ -1,19 +1,26 @@
 .contact-us-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
     text-align: center;
-    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10; 
+    width: 100%;
+    margin-top: 80px;
 }
 
-h2 {
+.contact-us-container h2 {
     margin-bottom: 20px;
     font-size: 2em;
+    color: black;
 }
 
-p {
+.contact-us-container p {
     font-size: 1em;
     margin-bottom: 30px;
+    color: black;
 }
 
 .contact-grid {
@@ -28,6 +35,10 @@ p {
     border: 1px solid #ddd;
     border-radius: 10px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: white;
+}
+.contact-card p{
+    color: white;
 }
 
 .contact-card:hover {
@@ -47,6 +58,7 @@ h3{
 
 p{
     margin-bottom: 15px;
+    color: black;
 }
 
 .contact-email {
