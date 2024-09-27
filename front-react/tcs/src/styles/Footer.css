@@ -1,0 +1,35 @@
+#texto-blanco{
+    color: rgb(255, 240, 240) !important;
+    font-size: 17px;
+}
+
+#title-one{
+    color: rgb(255, 165, 165) !important;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#title-two{
+    color: rgb(255, 165, 165) !important;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#title-three{
+    color: rgb(255, 165, 165) !important;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#creditos{
+    color: dimgray;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#body-f{
+    line-height: 2;
+}

@@ -1,0 +1,12 @@
+#color-buscar {
+    background-color:#ffba49!important;
+    margin-top: -6px;
+    padding-bottom: 20px;
+  }
+  
+#buscador{
+  width: 800px;
+  display: flex;
+  margin-right: 200px;
+  margin-top: 10px;
+}

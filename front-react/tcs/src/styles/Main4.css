@@ -1,0 +1,72 @@
+.contact-us-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10; 
+    width: 100%;
+    margin-top: 80px;
+}
+
+.contact-us-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: black;
+}
+
+.contact-us-container p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 20px;
+    background-color: rgb(255, 165, 165) !important;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: white;
+}
+.contact-card p{
+    color: white;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+h3{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+p{
+    margin-bottom: 15px;
+    color: black;
+}
+
+.contact-email {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}

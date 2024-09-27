@@ -1,0 +1,35 @@
+.banner {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10; 
+    width: 100%;
+  }
+  
+  .slide-text h1 {
+    margin: 0;
+    font-size:50px ;
+  }
+  .slide-text p {
+    font-size: 25px;
+  }
