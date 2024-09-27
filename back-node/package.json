@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+<<<<<<< HEAD
+    "mysql2": "^3.11.0"    
+=======
+    "mysql2": "^3.11.0"
+>>>>>>> camilo_dev
   }
 }
