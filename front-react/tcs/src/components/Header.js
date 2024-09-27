@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, Link } from 'react-router-dom';
+import DropDown from '../components/CarDropdown/DropDown';
 
 function Header() {
   return (
@@ -24,6 +25,7 @@ function Header() {
             <Nav.Link as={Link} to={"/Eventos"} id='texto-blanco'className='distancia'>Eventos Disponibles</Nav.Link>
             <Nav.Link as={Link}  to={"/Quieres"} id='texto-blanco' className='distancia' >¿Que Quieres?</Nav.Link>
             <Nav.Link as={Link}  to={"/Contactanos"}id='texto-blanco' className='distancia'>Contactanos</Nav.Link>
+            <DropDown />
 
           </Nav>
         </Navbar.Collapse>

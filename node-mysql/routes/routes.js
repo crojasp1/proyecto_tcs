@@ -24,7 +24,7 @@ router.post("/upload", productController.upload.single("image"), (req, res) => {
 })
 
 //Update
-router.put("/:id", productController.update);
+router.put("/car/:id", productController.update);
 
 
 //----------------------Rutas de los Clientes...............................---------------
@@ -36,6 +36,11 @@ router.put("/:id", productController.update);
   router.post("/addClient", clientController.createClient);
 
   // Actualizando cliente:
-  //router.put("/:id", clientController.update);
+  router.put("/client/:idClient", clientController.update);
+
+
+
+
+
 
 module.exports = router;

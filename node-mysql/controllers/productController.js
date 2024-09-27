@@ -46,11 +46,23 @@ const addCar = async (req, res) => {
   }
 
   //Actualizar
-  const update = async (req, res) =>{
+  const update = (req, res) =>{
 
-    const updated = await carTable.update({plate:req.body.plate},{where: { id: req.params.id } })
+    const updated = carTable.update({plate:req.body.plate},{where: { id: req.params.id } })
     .then((success) =>{
-      res.send(updated);
+      // Verificar si algún registro fue actualizado
+      if (updated[0] === 0) {
+      // Ningún registro actualizado (posiblemente no se encontró el id)
+      return res.status(404).json({
+        status: false,
+        message: "Carro no encontrado o no se pudo actualizar",
+      });
+    }
+    res.status(200).json({
+      status: true,
+      message: "Carro actualizado",
+      success: success
+    });
       console.log(success);
     }).catch((error) => {
       console.error("Error al crear carro:", error); // Mostrar error

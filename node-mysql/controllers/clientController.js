@@ -64,8 +64,8 @@ const getAllClient = async (res, req) => {
 
     // Creando funcion para UPDATE
 
-    const update = async (req, res) => {
-        let clienteBuscado = clientTable.update({idClient:req.body.idClient},{where: { id: req.params.id }})
+    const update =  (req, res) => {
+        let clienteBuscado = clientTable.update({name:req.body.name, age:req.body.age, email:req.body.email},{where: { idClient: req.params.idClient }})
         .then((success) =>{
             res.send(clienteBuscado);
             console.log(success);
