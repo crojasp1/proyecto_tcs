@@ -9,8 +9,8 @@ function Main3() {
         <div className='contenido'>
             <img src={fondo} alt="imagen de fondo" id='imagen-fondo'/>
                 <div className='texto'>
-                    <h1>¿Que Quieres?</h1>
-                    <h3>Es una iniciativa para promover y comprar boletas de nuevo eventos siendo tu el creador
+                    <h1>¿Qué Quieres?</h1>
+                    <h3>Es una iniciativa para promover y comprar boletas de nuevos eventos siendo tú el creador
                         o participando en ellos de una manera segura y transparente.
                     </h3>
                     <div className='botones'>

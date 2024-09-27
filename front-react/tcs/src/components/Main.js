@@ -1,8 +1,6 @@
 import React from 'react';
 import "../styles/Main.css";
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -18,15 +16,7 @@ function NavScrollExample() {
             navbarScroll
           >
           </Nav>
-          <Form className="d-flex" id='buscador'>
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="me-5"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Buscar</Button>
-          </Form>
+            
         </Navbar.Collapse>
       </Container>
     </Navbar>

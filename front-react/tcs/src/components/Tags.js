@@ -9,21 +9,21 @@ const tags = [
     id: 1,
     title: 'Audi Visionary Drive',
     image: image1,
-    url: 'https://youtube.com/fazttech',
+    url: 'https://www.audi.com.co',
     text: 'Audi Visionary Drive es un evento que presenta los últimos avances en tecnología, diseño y rendimiento. Los asistentes podrán conducir modelos eléctricos y deportivos en una pista diseñada para destacar su potencia, y participar en charlas innovación automotriz. ¡Los esperamos!'
   },
   {
     id: 2,
     title: 'Lamborghini Performance',
     image: image2,
-    url: 'https://youtube.com/fazttech',
+    url: 'https://www.lamborghini.com/es-en',
     text: 'Lamborghini Performance es un evento exclusivo para los amantes de la velocidad y el diseño de lujo. Los asistentes podrán probar los superdeportivos más potentes de Lamborghini en una pista, disfrutar de exposiciones sobre tecnología avanzada y conocer de cerca el futuro de la marca.'
   },
   {
     id: 3,
     title: 'Toyota Innovation Expo',
     image: image3,
-    url: 'https://youtube.com/fazttech',
+    url: 'https://www.toyota.com.co',
     text: 'Audi Visionary Drive es un evento exclusivo donde los asistentes podrán conducir los autos eléctricos y deportivos más innovadores de Audi, y participar en charlas sobre tecnología y movilidad futura.' 
   }
 ]

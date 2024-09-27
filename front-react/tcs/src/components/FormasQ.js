@@ -10,28 +10,28 @@ const FormasQ = () => {
     const FormasdeQQuieres = [
         {
             title: '1.',
-            description: 'Ingresa a nuesto sitio web ',
+            description: 'Ingresa a nuesto sitio web.',
             imagen : navegador,
             email: 'www.tcs.com'
         },
         {
             title: '2.',
-            description: 'Das Clic en Quiero Vender',
+            description: 'Das clic en Quiero Vender.',
             imagen : clic
         },
         {
             title: '3.',
-            description: 'Selecciona el aforo',
+            description: 'Selecciona el aforo.',
             imagen : aforo
         },
         {
             title: '4.',
-            description: 'Define el precio de venta',
+            description: 'Define el precio de venta.',
             imagen : precio
         },
         {
             title: '5.',
-            description: 'Listoo, Ya tienes tu evento Montado, a darle!!!',
+            description: '¡Listo! Ya tienes tu evento montado. ¡A darle!',
             imagen : check
         }
     ];
@@ -39,8 +39,8 @@ const FormasQ = () => {
     return (
         <div className='fondo'>
             <div className="texto-qquieres">
-                <h2>!Asi puedes Vender tus Boletas en ¿Que Quieres?</h2>
-                <p>Sigue este sencillo paso a paso para lograrlo </p>
+                <h2>Así puedes Vender tus Boletas en: ¿Que Quieres?</h2>
+                <p>Sigue este sencillo paso a paso para lograrlo: </p>
 
                 <div className="contenido-grid">
                     {FormasdeQQuieres.map((option, index) => (
